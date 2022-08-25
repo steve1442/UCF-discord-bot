@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-list = ["chickfila", "chipotle", "lazy moon", "ramen takagi", "pub sub", "panda express", "tijuana flats", "la granj something (place abdul took me to near knights circle)"];
+list = ["chickfila", "chipotle", "lazy moon", "ramen takagi", "pub sub", "panda express", "tijuana flats", "la granja", "random indian place abdul was talking about", "firehouse subs", "**STARVE**", "five guys"];
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require('discord.js');
 
