@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-
+list = ["chickfila", "chipotle", "lazy moon", "ramen takagi", "pub sub", "panda express", "tijuana flats", "la granj something (place abdul took me to near knights circle)"];
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require('discord.js');
 
@@ -18,8 +18,10 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
-	if (commandName === 'ping') {
-		await interaction.reply('Pong!');
+	if (commandName === 'rng') {
+		await interaction.reply(list[Math.floor(Math.random() * list.length)]);
+	} else if (commandName === 'list') {
+		await interaction.reply(list.toString());
 	}
 });
 
