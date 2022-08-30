@@ -1,3 +1,9 @@
-FROM node:lts-alpine3.9USER rootENV APP /usr/src/APPCOPY package.json /tmp/package.jsonRUN cd /tmp && npm install --loglevel=warn \
-    && mkdir -p $APP \
-    && mv /tmp/node_modules $APPCOPY src $APP/srcCOPY package.json $APPCOPY tsconfig.json $APPWORKDIR $APPRUN npm run buildCMD [ "node", "dist/index.js" ]
+FROM node:latest
+USER root
+WORKDIR /usr/src/bot
+COPY package.json /usr/src/bot/
+RUN npm install
+COPY . /usr/src/bot
+COPY ./UCF-discord-bot/.env /user/src/bot/UCF-discord-bot
+WORKDIR /usr/src/bot/UCF-discord-bot/
+CMD ["node", "index.js"]
