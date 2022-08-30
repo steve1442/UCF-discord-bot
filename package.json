@@ -1,0 +1,24 @@
+{
+  "name": "ucf-discord-bot",
+  "version": "1.0.0",
+  "description": "For a UCF discord server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve1442/UCF-discord-bot.git"
+  },
+  "author": "Steven Keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steve1442/UCF-discord-bot/issues"
+  },
+  "homepage": "https://github.com/steve1442/UCF-discord-bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.1"
+  }
+}
